@@ -1,23 +1,59 @@
 # Ham-Spam Detection
+**Spam Detection with Naive Bayes Classifier and Tkinter GUI**
 
-The following model takes in a dataset of over 5000 SMS entries and categorises then into HAM(desired) or SPAM(not desired). This is used to make it easier for the user to segregate their SMS recieved. The dataset is stopwords is downloaded forused to clean and Vectorize the SMS entries so that the classification model an accept the features(using nltk library). Then the context is outputted in  the form of a sparse matrix. TF-IDF is used to assign weights to the words. And lastly, we use Naive Bayes Classifier to train the model with the help of a Pipeline (all from sklearn)
+**Introduction:**
+This project implements a spam detection system using the Naive Bayes classifier. The system is built with Python and leverages the scikit-learn library for machine learning and Tkinter for creating a user-friendly graphical interface. The Naive Bayes classifier is trained on a dataset of emails to distinguish between spam and ham (non-spam) messages. Users can input a message into the Tkinter GUI, and the system classifies it as either spam or ham based on the trained model.
 
-STEPS-
+**Contents:**
+- **Data Preparation:** The project starts by loading the email dataset from a CSV file using Pandas. It explores the dataset, analyzing spam and ham messages' distribution and statistics.
+  
+- **Data Visualization:** Visualizations using Seaborn and Matplotlib illustrate the distribution of spam and ham messages. The spam and ham percentages are calculated to provide insights into the dataset's composition.
 
-1) Use rstrip to extract the useful information from the dataset.
+- **Text Vectorization:** The emails' text data is processed using the CountVectorizer from scikit-learn. This step converts the text into numerical features that can be used by machine learning algorithms.
 
-2) enumerate it and load it into a DataFrame.
+- **Model Training:** The Naive Bayes classifier (MultinomialNB) is trained on the vectorized text data. The dataset is split into training and testing sets for model evaluation.
 
-3) Visualize it in graphs to get an overview of the two categories. We deduced that SPAM messages have more characters.
+- **Model Evaluation:** The trained model's performance is evaluated using metrics such as confusion matrices and classification reports. These evaluations provide an understanding of the model's accuracy and ability to classify spam and ham messages correctly.
 
-4) Text Preprocessing: bag of words is used to convert each word to a numeric value so that the classifier can take in the values.
+- **Tkinter GUI:** The project includes a graphical user interface built with Tkinter. Users can input a message into the provided text entry field. When the "Classify" button is clicked, the system uses the pre-trained model to classify the message and displays the result (spam or ham) on the GUI.
 
-5) For nltk import the stopwords corpus to clean the dataframe. Further use Vectorization to normalize the data.
+**Installation:**
+1. Ensure you have Python installed on your system.
+2. Install the required libraries using pip:
+   ```
+   pip install pandas numpy seaborn matplotlib scikit-learn joblib
+   ```
+3. Clone the repository to your local machine:
+   ```
+   git clone <repository_url>
+   ```
+4. Run the `spam_detection_gui.py` file to launch the Tkinter application.
 
-6) Use Sparse matrix to display the new bag of words.
+**Usage:**
+1. Execute the `spam_detection_gui.py` file.
+2. Enter a message into the provided text entry field.
+3. Click the "Classify" button to see the classification result (Spam or Ham) displayed on the GUI.
 
-7) TF-IDF is used for data mining from the dataframe and evaluating weight of each words in the corpus.
+**Files:**
+- **emails.csv:** Dataset containing email messages for training the spam detection model.
+- **spam_detection_gui.py:** Python script containing the Naive Bayes classifier and Tkinter GUI implementation.
+- **count_vectorizer.pkl:** Pre-trained CountVectorizer object for text vectorization.
+- **spam_classifier_model.pkl:** Pre-trained Naive Bayes classifier for spam detection.
 
-8) Finally a model is trained and evaluated using the Naive Bayes Classifier form Sci-Kit Library
+**License:**
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-9) A confusion matrix an classification report is generated it display various metrics of the model(like presicion and accuracy)
+**Contributing:**
+1. Fork the repository on GitHub.
+2. Create a new branch for your changes.
+3. Make your modifications and commit the changes.
+4. Push your changes to your fork.
+5. Submit a pull request with a detailed description of your changes.
+
+**Authors:**
+[Your Name]
+[Your Email]
+
+**Acknowledgments:**
+- The project was inspired by the need for effective spam detection systems in email communication.
+- Thanks to the open-source community for providing valuable resources and tools.
