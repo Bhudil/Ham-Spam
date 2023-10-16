@@ -1,4 +1,6 @@
 # Ham-Spam Detection
+
+
 **Spam Detection with Naive Bayes Classifier and Tkinter GUI**
 
 **Introduction:**
@@ -40,8 +42,6 @@ This project implements a spam detection system using the Naive Bayes classifier
 - **count_vectorizer.pkl:** Pre-trained CountVectorizer object for text vectorization.
 - **spam_classifier_model.pkl:** Pre-trained Naive Bayes classifier for spam detection.
 
-**License:**
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 **Contributing:**
 1. Fork the repository on GitHub.
@@ -50,9 +50,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4. Push your changes to your fork.
 5. Submit a pull request with a detailed description of your changes.
 
-**Authors:**
-[Your Name]
-[Your Email]
+**Outcomes**
+## Layout:
+
+![Screenshot (83)](https://github.com/Bhudil/Ham-Spam/assets/99169324/c37e0fed-e4eb-42a4-a875-0cf1436c7f7f)
+
+## Spam use-Case:
+
+![Screenshot (84)](https://github.com/Bhudil/Ham-Spam/assets/99169324/4e1e900a-b402-4a9f-903d-8d9c327c7d4e)
+
+## Ham Use-case:
+
+![Screenshot (85)](https://github.com/Bhudil/Ham-Spam/assets/99169324/15590c05-1f81-42d6-942f-01ddcb701de7)
+
 
 **Acknowledgments:**
 - The project was inspired by the need for effective spam detection systems in email communication.
