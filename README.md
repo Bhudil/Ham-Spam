@@ -1,6 +1,5 @@
 # Ham-Spam Detection
 
-
 **Spam Detection with Naive Bayes Classifier and Tkinter GUI**
 
 **Introduction:**
